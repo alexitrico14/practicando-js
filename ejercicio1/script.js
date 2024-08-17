@@ -26,7 +26,7 @@ function limpiarErrores() {
 
 function exito() {
     // Para exito es con "class"
-    document.querySelector(".resultado").innerHTML = "El formulario validado con exito";
+    document.querySelector(".resultado").innerHTML = "Mensaje enviado con exito!!";
 }
 
 function validar(nombre, asunto, mensaje) {
@@ -34,18 +34,18 @@ function validar(nombre, asunto, mensaje) {
 
     let validacionNombre = /[a-zA-Z]/gim;
     if (validacionNombre.test(nombre) == false) {
-        document.querySelector(".errorNombre").innerHTML = "Ingrese un nombre valido";
+        document.querySelector(".errorNombre").innerHTML = "El nombre es requerido";
         pasamosLaValidacion = false;
     }
 
     let validacionAsunto = /[a-zA-Z]+/gim;
     if (validacionAsunto.test(asunto) == false) {
-        document.querySelector(".errorAsunto").innerHTML = "Ingrese Asunto";
+        document.querySelector(".errorAsunto").innerHTML = "El asunto es requerido";
         pasamosLaValidacion = false;
     }
     let validacionMensaje = /[a-zA-Z]+/gim;
     if (validacionMensaje.test(mensaje) == false) {
-        document.querySelector(".errorMensaje").innerHTML = "Ingrese Mensaje";
+        document.querySelector(".errorMensaje").innerHTML = "El mensaje es requerido";
         pasamosLaValidacion = false;
     }
 
